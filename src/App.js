@@ -182,6 +182,10 @@ Trabalhei com interceptação de requisições, validação de respostas e simul
             <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/instagram.svg" alt="Instagram" className="social-icon" />
             Instagram
           </a>
+          <a href="https://wa.me/53997130640" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/whatsapp.svg" alt="WhatsApp" className="social-icon" />
+            WhatsApp
+          </a>
         </div>
       </section>
 
