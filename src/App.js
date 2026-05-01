@@ -3,6 +3,7 @@ import './App.css';
 
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
   const slides = [
     { tag: 'Selenium', img: 'https://cdn.simpleicons.org/selenium' },
     { tag: 'Cypress', img: 'https://cdn.simpleicons.org/cypress' },
@@ -38,14 +39,17 @@ function App() {
 
   return (
     <div className="App">
-      <header>
+<header>
         <nav>
-          <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#experiencia">Experiência</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#contato">Contato</a></li>
+          <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+            <span className={`hamburger ${menuOpen ? 'open' : ''}`}></span>
+          </div>
+          <ul className={`nav-list ${menuOpen ? 'active' : ''}`}>
+            <li><a href="#sobre" onClick={() => setMenuOpen(false)}>Sobre</a></li>
+            <li><a href="#experiencia" onClick={() => setMenuOpen(false)}>Experiência</a></li>
+            <li><a href="#habilidades" onClick={() => setMenuOpen(false)}>Habilidades</a></li>
+            <li><a href="#projetos" onClick={() => setMenuOpen(false)}>Projetos</a></li>
+            <li><a href="#contato" onClick={() => setMenuOpen(false)}>Contato</a></li>
           </ul>
         </nav>
       </header>
